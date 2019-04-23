@@ -3,6 +3,14 @@ import "./styles.scss";
 import Logo from "../Logo";
 
 export default class FooterLogo extends Component {
+  componentWillMount() {
+    this.handleCustomLogo();
+  }
+
+  handleCustomLogo = () => {
+    this.props.handleCustomLogo(true);
+  }
+
   render() {
     return (
       <div className="custom-logo">
